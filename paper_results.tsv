@@ -1,46 +1,46 @@
-rmae	method	h2g	h2med
-.118	causal	.1	.01
-.342	twmr	.1	.01
-.237	ptwas	.1	.01
-.193	mrlocus	.1	.01
-.180	ecv-mrl	.1	.01
-.099	causal	.2	.01
-.242	twmr	.2	.01
-.264	ptwas	.2	.01
-.116	mrlocus	.2	.01
-.148	ecv-mrl	.2	.01
-.184	causal	.05	.01
-.623	twmr	.05	.01
-.467	ptwas	.05	.01
-.322	mrlocus	.05	.01
-.438	ecv-mrl	.05	.01
-.159	causal	.1	.005
-.369	twmr	.1	.005
-.346	ptwas	.1	.005
-.185	mrlocus	.1	.005
-.228	ecv-mrl	.1	.005
-.070	causal	.2	.005
-.215	twmr	.2	.005
-.245	ptwas	.2	.005
-.110	mrlocus	.2	.005
-.125	ecv-mrl	.2	.005
-.226	causal	.05	.005
-.608	twmr	.05	.005
-.432	ptwas	.05	.005
-.323	mrlocus	.05	.005
-.421	ecv-mrl	.05	.005
-.196	causal	.1	.001
-.439	twmr	.1	.001
-.250	ptwas	.1	.001
-.302	mrlocus	.1	.001
-.326	ecv-mrl	.1	.001
-.092	causal	.2	.001
-.201	twmr	.2	.001
-.154	ptwas	.2	.001
-.156	mrlocus	.2	.001
-.146	ecv-mrl	.2	.001
-.241	causal	.05	.001
-.619	twmr	.05	.001
-.439	ptwas	.05	.001
-.387	mrlocus	.05	.001
-.441	ecv-mrl	.05	.001
+rmae	method	h2g	h2med	nsim
+.118	causal	.1	.01	36
+.342	twmr	.1	.01	36
+.237	ptwas	.1	.01	36
+.193	mrlocus	.1	.01	36
+.180	ecv-mrl	.1	.01	36
+.099	causal	.2	.01	19
+.242	twmr	.2	.01	19
+.264	ptwas	.2	.01	19
+.116	mrlocus	.2	.01	19
+.148	ecv-mrl	.2	.01	19
+.184	causal	.05	.01	27
+.623	twmr	.05	.01	27
+.467	ptwas	.05	.01	27
+.322	mrlocus	.05	.01	27
+.438	ecv-mrl	.05	.01	27
+.159	causal	.1	.005	37
+.369	twmr	.1	.005	37
+.346	ptwas	.1	.005	37
+.185	mrlocus	.1	.005	37
+.228	ecv-mrl	.1	.005	37
+.070	causal	.2	.005	20
+.215	twmr	.2	.005	20
+.245	ptwas	.2	.005	20
+.110	mrlocus	.2	.005	20
+.125	ecv-mrl	.2	.005	20
+.226	causal	.05	.005	24
+.608	twmr	.05	.005	24
+.432	ptwas	.05	.005	24
+.323	mrlocus	.05	.005	24
+.421	ecv-mrl	.05	.005	24
+.196	causal	.1	.001	18
+.439	twmr	.1	.001	18
+.250	ptwas	.1	.001	18
+.302	mrlocus	.1	.001	18
+.326	ecv-mrl	.1	.001	18
+.092	causal	.2	.001	19
+.201	twmr	.2	.001	19
+.154	ptwas	.2	.001	19
+.156	mrlocus	.2	.001	19
+.146	ecv-mrl	.2	.001	19
+.241	causal	.05	.001	25
+.619	twmr	.05	.001	25
+.439	ptwas	.05	.001	25
+.387	mrlocus	.05	.001	25
+.441	ecv-mrl	.05	.001	25
