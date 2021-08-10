@@ -10,10 +10,11 @@ library(ggrepel)
 twas <- read.csv(paste0(trait,"-twas.csv"))
 dat <- merge(dat, twas[,c("gene_name","TWAS.Z","TWAS.P")], by="gene_name")
 
-thr <- c("BP"=1.96, "SCZ"=2.81)
+thr <- c("BP"=1.96, "SCZ"=1.96)
 
 dat <- dat %>%
-  mutate(z = MRLocus/sd, sig = abs(z) > thr[trait]) %>%
+  #  mutate(z = MRLocus/sd, sig = abs(z) > thr[trait]) %>%
+  mutate(z = MRLocus/sd, sig = abs(z) > thr[trait] & abs(MRLocus) > 0.3) %>%
   arrange(abs(z)) %>%
   filter(!is.na(sig))
 
@@ -27,12 +28,14 @@ ggplot(dat, aes(TWAS.Z, MRLocus, col=sig)) +
   geom_hline(yintercept=0, alpha=.5, lty=2) + geom_vline(xintercept=0, alpha=.5, lty=2) +
   theme(legend.position="none") +
   scale_colour_manual(values = cols) +
-  xlim(-15,15) +
-  coord_cartesian(ylim=c(-1,1)) +
+  xlim(-15,15) + ylab("MRLocus - delta log odds per SD gene exp.") +
+  coord_cartesian(ylim=c(-1.5,1.5)) +
+  # coord_cartesian(ylim=c(-2,2)) +
   geom_text_repel(data=sig, aes(TWAS.Z, MRLocus, label=gene_name),
                    size=4, color="blue", 
                    box.padding = unit(1, "lines"),
-                   point.padding = unit(1.5, "lines"))
+                  point.padding = unit(1.5, "lines")) +
+  theme_grey(base_size = 22) 
 
 dat %>% filter(twmrP < .01) %>%
   ggplot(aes(TWMR, MRLocus, col=sig)) +
@@ -47,7 +50,8 @@ dat %>% filter(twmrP < .01) %>%
   geom_text_repel(data=sig, aes(TWMR, MRLocus, label=gene_name),
                    size=4, color="blue", 
                    box.padding = unit(2, "lines"),
-                   point.padding = unit(1.5, "lines"))
+                  point.padding = unit(1.5, "lines")) +
+  theme_grey(base_size = 22) 
 
 sig %>% 
   ggplot(aes(TWMR, MRLocus, col="red")) +
